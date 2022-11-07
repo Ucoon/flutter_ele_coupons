@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+BorderRadius get borderRadius1 => BorderRadius.circular(1);
+BorderRadius get borderRadius2 => BorderRadius.circular(2);
+BorderRadius get borderRadius3 => BorderRadius.circular(3);
+BorderRadius get borderRadius4 => BorderRadius.circular(4);
+BorderRadius get borderRadius5 => BorderRadius.circular(5);
+BorderRadius get borderRadius6 => BorderRadius.circular(6);
+BorderRadius get borderRadius7 => BorderRadius.circular(7);
+BorderRadius get borderRadius8 => BorderRadius.circular(8);
+BorderRadius get borderRadius9 => BorderRadius.circular(9);
+BorderRadius get borderRadius10 => BorderRadius.circular(10);
+BorderRadius get borderRadius12 => BorderRadius.circular(12);
+BorderRadius get borderRadius15 => BorderRadius.circular(15);
+BorderRadius get borderRadius16 => BorderRadius.circular(16);
+BorderRadius get borderRadius17 => BorderRadius.circular(17);
+BorderRadius get borderRadius19 => BorderRadius.circular(19);
+BorderRadius get borderRadius20 => BorderRadius.circular(20);
+BorderRadius get borderRadius24 => BorderRadius.circular(24);
+BorderRadius get borderRadius22 => BorderRadius.circular(22);
+BorderRadius get borderRadius26 => BorderRadius.circular(26);
+BorderRadius get borderRadius50 => BorderRadius.circular(50);
+BorderRadius get borderRadius54 => BorderRadius.circular(54);
+BorderRadius get borderRadius39 => BorderRadius.circular(39);
+BorderRadius get borderRadius40 => BorderRadius.circular(40);
+BorderRadius get borderRadius48 => BorderRadius.circular(48);
+BorderRadius get borderRadius100 => BorderRadius.circular(100);
