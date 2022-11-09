@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mpcore/mpkit/mpkit.dart';
-import '../../classify/index.dart';
-import '../../global/index.dart';
-import '../../home/index.dart';
-import '../../personal/index.dart';
+import '/widget/widget.dart';
+import '/app/modules/global/index.dart';
+import '/app/modules/home/index.dart';
+import '/app/modules/personal/index.dart';
 import '../index.dart';
 
 class TabHomePage extends StatefulWidget {
@@ -39,52 +40,39 @@ class TabHomePageState extends State<TabHomePage> {
     return <MPMainTabItem>[
       MPMainTabItem(
         activeTabWidget: _buildTabWidget(
-          icon: MaterialIcons.home,
-          title: 'HOME',
+          icon: getAssetImageUrl('icon_tab_home_active'),
+          title: '外卖券',
           active: true,
         ),
         inactiveTabWidget: _buildTabWidget(
-          icon: MaterialIcons.home,
-          title: 'HOME',
+          icon: getAssetImageUrl('icon_tab_home'),
+          title: '外卖券',
           active: false,
         ),
         builder: (context) => HomePage(),
       ),
       MPMainTabItem(
         activeTabWidget: _buildTabWidget(
-          icon: MaterialIcons.settings_outlined,
-          title: '全球购',
+          icon: getAssetImageUrl('icon_tab_whatwedo_active'),
+          title: '吃什么',
           active: true,
         ),
         inactiveTabWidget: _buildTabWidget(
-          icon: MaterialIcons.settings_outlined,
-          title: '全球购',
+          icon: getAssetImageUrl('icon_tab_whatwedo'),
+          title: '吃什么',
           active: false,
         ),
         builder: (context) => GlobalPurchasingPage(),
       ),
       MPMainTabItem(
         activeTabWidget: _buildTabWidget(
-          icon: MaterialIcons.add_alarm,
-          title: '领现金',
+          icon: getAssetImageUrl('icon_tab_person_active'),
+          title: '个人中心',
           active: true,
         ),
         inactiveTabWidget: _buildTabWidget(
-          icon: MaterialIcons.add_alarm,
-          title: '领现金',
-          active: false,
-        ),
-        builder: (context) => ClassifyPage(),
-      ),
-      MPMainTabItem(
-        activeTabWidget: _buildTabWidget(
-          icon: MaterialIcons.person_outline,
-          title: '我的',
-          active: true,
-        ),
-        inactiveTabWidget: _buildTabWidget(
-          icon: MaterialIcons.person_outline,
-          title: '我的',
+          icon: getAssetImageUrl('icon_tab_person'),
+          title: '个人中心',
           active: false,
         ),
         builder: (context) => PersonalPage(),
@@ -96,16 +84,19 @@ class TabHomePageState extends State<TabHomePage> {
     required String icon,
     required String title,
     bool active = false,
-    GestureTapCallback? onTap,
   }) {
-    return GestureDetector(
-      onTap: onTap,
+    return Container(
+      width: MediaQuery.of(context).size.width / 3,
+      height: 44,
       child: Column(
         children: <Widget>[
-          MPIcon(
+          Image.asset(
             icon,
             color: active ? Colors.blue : Colors.grey,
+            width: 28,
+            height: 28,
           ),
+          SizedBox(height: 5),
           Text(
             title,
             style: TextStyle(

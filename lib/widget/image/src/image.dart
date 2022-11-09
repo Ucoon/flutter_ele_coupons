@@ -74,5 +74,12 @@ AssetImage getAssetImage(
   String url, {
   String suffix = 'png',
 }) {
-  return AssetImage('assets/images/$url.$suffix');
+  return AssetImage(getAssetImageUrl(url, suffix: suffix));
+}
+
+String getAssetImageUrl(
+  String url, {
+  String suffix = 'png',
+}) {
+  return 'assets/images/$url.$suffix';
 }

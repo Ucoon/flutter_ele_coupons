@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMPApp(
-      title: '开发模板',
+      title: '饿了就点',
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.cupertino,
       enableLog: true, // 日志
