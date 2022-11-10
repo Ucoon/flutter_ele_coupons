@@ -30,9 +30,5 @@ dependency_overrides:
 
 flutter:
   assets:
-    - assets/images/icon_tab_home.png
-    - assets/images/icon_tab_home_active.png
-    - assets/images/icon_tab_person.png
-    - assets/images/icon_tab_person_active.png
-    - assets/images/icon_tab_whatwedo.png
-    - assets/images/icon_tab_whatwedo_active.png
+    - assets
+    - assets/images/

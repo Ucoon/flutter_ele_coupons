@@ -92,7 +92,6 @@ class TabHomePageState extends State<TabHomePage> {
         children: <Widget>[
           Image.asset(
             icon,
-            color: active ? Colors.blue : Colors.grey,
             width: 28,
             height: 28,
           ),
@@ -100,8 +99,8 @@ class TabHomePageState extends State<TabHomePage> {
           Text(
             title,
             style: TextStyle(
-              fontSize: 12,
-              color: active ? Colors.blue : Colors.grey,
+              fontSize: active ? 16 : 12,
+              color: active ? Color(0xFF2979ff) : Colors.grey,
             ),
           ),
         ],

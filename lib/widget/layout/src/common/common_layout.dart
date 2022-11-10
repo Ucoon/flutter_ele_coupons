@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mpcore/mpkit/mpkit.dart';
-import '../../../../app/base/base_body_widget.dart';
-import '../../../../app/base/controller/base_controller.dart';
-import 'app_bar.dart';
+import '/app/base/base_body_widget.dart';
+import '/app/base/controller/base_controller.dart';
 
 class CommonLayoutPage<T extends BaseController> extends StatelessWidget {
   const CommonLayoutPage(
@@ -83,20 +82,6 @@ class CommonLayoutPage<T extends BaseController> extends StatelessWidget {
       onPageScroll: onPageScroll,
       onReachBottom: onReachBottom,
       onWechatMiniProgramShareAppMessage: onWechatMiniProgramShareAppMessage,
-      appBar: buildAppBar(
-        context,
-        title,
-        subTitle: subTitle,
-        titleIcon: titleIcon,
-        trailing: trailing,
-        leading: canBack ? appBarLeading?.call() : null,
-        onBackClick: onBack ?? onBackConfirm,
-        backgroundColor: appBarBackgroundColor,
-        canBack: canBack,
-        appBarHeight: appBarHeight,
-        titleColor: titleColor,
-        fontSize: fontSize,
-      ),
       body: SafeArea(
         bottom: bottomBarWithSafeArea,
         child: Container(

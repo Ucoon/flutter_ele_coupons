@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:mpcore/mpkit/mpkit.dart';
-import '../../../../common/values/values.dart';
+import '/common/values/values.dart';
 
 MPAppBar buildAppBar(
   BuildContext context,
