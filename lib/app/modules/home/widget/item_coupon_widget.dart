@@ -14,9 +14,9 @@ class ItemCouponWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: EmptyCardWidget(
-        width: MediaQuery.of(context).size.width,
+        width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-        margin: EdgeInsets.symmetric(horizontal: 25),
+        margin: EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -39,7 +39,7 @@ class ItemCouponWidget extends StatelessWidget {
       children: <Widget>[
         _buildCouponNameWidget(),
         _buildCouponTypeWidget(),
-        const Spacer(),
+        SizedBox(width: 15),
         _buildReceiveButtonWidget(),
       ],
     );
@@ -59,8 +59,8 @@ class ItemCouponWidget extends StatelessWidget {
           coupon.name,
           style: TextStyle(
             color: Color(0xFF2F3B46),
-            fontSize: 24,
-            fontWeight: FontWeight.w800,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ],
@@ -69,8 +69,8 @@ class ItemCouponWidget extends StatelessWidget {
 
   Widget _buildCouponTypeWidget() {
     return Container(
-      width: 150,
       height: 38,
+      padding: EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Color(0xFFf9db8d),
@@ -88,8 +88,8 @@ class ItemCouponWidget extends StatelessWidget {
 
   Widget _buildReceiveButtonWidget() {
     return Container(
-      width: 170,
-      height: 60,
+      height: 48,
+      padding: EdgeInsets.symmetric(horizontal: 15),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Color(0xFFec6f43),

@@ -44,7 +44,7 @@ class _HomeTabBarWidgetState extends State<HomeTabBarWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
       child: Row(
         mainAxisSize: MainAxisSize.min,
