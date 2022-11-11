@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mpcore/mpkit/mpkit.dart';
 import '/widget/widget.dart';
-import '/app/modules/global/index.dart';
+import '/app/modules/what_to_eat/index.dart';
 import '/app/modules/home/index.dart';
 import '/app/modules/personal/index.dart';
 import '../index.dart';
@@ -31,8 +31,10 @@ class TabHomePageState extends State<TabHomePage> {
   Widget build(BuildContext context) {
     return MPMainTabView(
       tabs: _createMPMainTabItems(),
-      controller: controller.pageController,
-      keepAlive: true,
+      loadingBuilder: (context) {
+        print('TabHomePageState.build loading');
+        return LoadingWidget(stop: false);
+      },
     );
   }
 
@@ -62,7 +64,7 @@ class TabHomePageState extends State<TabHomePage> {
           title: '吃什么',
           active: false,
         ),
-        builder: (context) => GlobalPurchasingPage(),
+        builder: (context) => WhatToEatPage(),
       ),
       MPMainTabItem(
         activeTabWidget: _buildTabWidget(

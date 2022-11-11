@@ -150,7 +150,7 @@ class RequestClient {
             BaseRespEntity<T> baseResEntity = BaseRespEntity()
               ..data = data
               ..code = baseResult['code']
-              ..message = baseResult['message'] ?? '';
+              ..message = baseResult['msg'] ?? '';
             return Future.value(baseResEntity);
           } catch (e) {
             throw (ResponseException(
@@ -159,12 +159,12 @@ class RequestClient {
         } else {
           BaseRespEntity<T> baseResEntity = BaseRespEntity()
             ..code = baseResult['code']
-            ..message = baseResult['message'] ?? '';
+            ..message = baseResult['msg'] ?? '';
           return Future.value(baseResEntity);
         }
       } else {
         throw (ResponseException(
-            code: baseResult['code'], msg: baseResult['message'] ?? ''));
+            code: baseResult['code'], msg: baseResult['msg'] ?? ''));
       }
     } else {
       throw (DioError(requestOptions: RequestOptions(path: requestUrl)));

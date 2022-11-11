@@ -29,6 +29,24 @@ dependency_overrides:
   flutter_web_plugins: "0.17.3"
 
 flutter:
+  uses-material-design: true
+
   assets:
-    - assets
-    - assets/images/
+    - assets/images/icon_all_logo.png
+    - assets/images/icon_arrow_right.png
+    - assets/images/icon_contact.png
+    - assets/images/icon_custom.png
+    - assets/images/icon_default_avatar_icon.png
+    - assets/images/icon_ele_logo.png
+    - assets/images/icon_meituan_logo.png
+    - assets/images/icon_red_package.png
+    - assets/images/icon_share.png
+    - assets/images/icon_subscribe.png
+    - assets/images/icon_tab_home.png
+    - assets/images/icon_tab_home_active.png
+    - assets/images/icon_tab_person.png
+    - assets/images/icon_tab_person_active.png
+    - assets/images/icon_tab_whatwedo.png
+    - assets/images/icon_tab_whatwedo_active.png
+    - assets/images/icon_eat_what_bg.png
+
