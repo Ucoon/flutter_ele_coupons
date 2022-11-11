@@ -1,20 +1,43 @@
 import 'package:flutter/material.dart';
 
 ///图片加载工具类
+Widget loadImage(
+  String url, {
+  double? width = 64,
+  double? height = 64,
+  BoxFit fit = BoxFit.cover,
+  Alignment alignment = Alignment.center,
+  Color? imageColor,
+  BlendMode? colorBlendMode,
+}) {
+  if (url.isEmpty) {
+    return getDefaultPlaceHolderWidget(
+        width: width ?? 64, height: height ?? 64);
+  }
+  return Image.network(
+    url,
+    width: width,
+    height: height,
+    fit: fit,
+    color: imageColor,
+    alignment: alignment,
+    colorBlendMode: colorBlendMode,
+    loadingBuilder: ((context, child, loadingProgress) {
+      return getDefaultPlaceHolderWidget(
+          width: width ?? 64, height: height ?? 64);
+    }),
+  );
+}
 
 Widget getDefaultPlaceHolderWidget({
   double width = 64,
   double height = 64,
-  String placeholder = 'icon_place_logo',
 }) {
   return Container(
     width: width,
     height: height,
     color: const Color(0xFFE0E2E6),
     alignment: Alignment.center,
-    child: Image.asset(
-      'assets/images/$placeholder.png',
-    ),
   );
 }
 
